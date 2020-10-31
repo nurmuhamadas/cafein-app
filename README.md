@@ -99,7 +99,7 @@ Script
 
 ---
 
-##License
+## License
 >You can check out the full license [here](https://github.com/nurmuhamadas/cafein-app/blob/master/LICENSE)
 
 This project is licensed under the terms of the **MIT** license.
