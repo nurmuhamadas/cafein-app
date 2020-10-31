@@ -1,0 +1,103 @@
+@import 'variable';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100vw;
+    height: fit-content;
+    font-family: $roboto;
+    font-size: 1rem;
+    color: #272727;
+} 
+
+h1 {
+    font-family: $openSans;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: $openSans;
+    font-size: 1.5rem;
+}
+
+h3{
+    font-family: $openSans;
+    font-size: 1.125rem;
+}
+
+p{
+    font-family: $roboto;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #272727;
+    outline: unset;
+}
+
+button {
+    width: auto;
+    height: auto;
+    min-width: 44px;
+    min-height: 44px;
+    border: none;
+    box-shadow: none;
+    background-color: #ffffff00;
+    border-radius: 8px;
+    width: 128px;
+    font-weight: bold;
+    transition: $transition;
+    cursor: pointer;
+    
+    &.outlined {
+        border: 1px solid $primary-color;
+        color: $primary-color;
+
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+
+    &.filled {
+        background-color: $primary-color;
+        color: white;
+
+        &:hover {
+            background-color: darken($color: $primary-color, $amount: 10%);
+            box-shadow: 0 0 10px #00000033;
+        }
+    }
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #C70039;
+    color: white;
+    padding: 8px;
+    box-shadow: 0 0 10px #00000033;
+    z-index: 999;
+
+    &:focus {
+        top: 0;
+     }
+ }
+  
+.swal-text, .swal-title, .swal-button {
+    font-family: $roboto;
+}

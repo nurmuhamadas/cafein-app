@@ -1,0 +1,35 @@
+@import './responsive';
+@import './variable';
+
+#restaurant__menus {
+  width: 100%;
+  height: max-content;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+
+@include media-sm {
+  #restaurant__menus {
+    padding: 0 2rem;
+    justify-content: center;
+    grid-template-columns: 350px;
+  }
+}
+
+@include media-md {
+  #restaurant__menus {
+    padding: 0 3rem;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+  }
+}
+
+@include media-lg {
+  #restaurant__menus {
+    min-width: 325px;
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+}

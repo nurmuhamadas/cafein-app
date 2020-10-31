@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+
+$roboto: 'Roboto', sans-serif;
+$openSans: 'Open Sans', sans-serif;
+
+$primary-color: #FF5733;
+$secondary-color: #C70039;
+$dark-color: #571845;
+
+$transition: ease-in-out .4s all;
+
+@mixin column-gap($value) {
+  & > *:not(:last-child) {
+    margin-right: $value;
+  }
+}
+
+@mixin row-gap($value) {
+  & > *:not(:last-child) {
+    margin-bottom: $value;
+  }
+}

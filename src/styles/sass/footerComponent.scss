@@ -1,0 +1,34 @@
+@import 'responsive';
+
+footer {
+    width: 100%;
+    height: 64px;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #C70039;
+
+    p {
+        color: white;
+    }
+}
+
+@include media-sm {
+    footer {
+        padding: 0 2rem;
+    }
+}
+
+@include media-md {
+    footer {   
+        padding: 0 3rem; 
+    }
+}
+
+@include media-lg {
+    footer {   
+        padding: 0 8rem; 
+    }
+}

@@ -1,0 +1,149 @@
+@import './responsive';
+@import './variable';
+
+#detail-restaurant {
+  width: 100%;
+  height: max-content;
+
+  .restaurant__img-wrap {
+      width: 100%;
+      height: auto;
+      min-height: 216px;
+      position: relative;
+      overflow: hidden;
+
+      .restaurant__img-item {
+          width: 100%;
+          height: 216px;
+          object-fit: cover;
+      }
+
+      .layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to top, rgba(0,0,0, .75), rgba(0,0,0,0))
+
+      }
+  }
+
+  .restaurant__detail {
+      width: 100%;
+      height: max-content;
+      padding: 0 1rem;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      @include row-gap(1rem);
+
+      .restaurant__category {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include column-gap(.5rem);
+
+        .restaurant__category-pill {
+          width: max-content;
+          height: max-content;
+          padding: .4rem 1.25rem;
+          display: block;
+          background-image: linear-gradient(to right, $primary-color, $secondary-color );
+          border-radius: 1rem;
+          font-size: .875rem;
+          color: white;
+        }
+      }
+
+      .restaurant__label {
+          width: 100%;
+          height: max-content;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          @include row-gap(.75rem);
+  
+          .restaurant__label-location {
+              width: max-content;
+              height: max-content;
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+  
+              .material-icons {
+                  color: $primary-color;
+                  margin-right: .5rem;
+              }
+          }
+      }
+  
+      .restaurant__name {
+          width: 100%;
+          height: max-content;
+      }
+  
+      .restaurant__description {
+          width: 100%;
+          height: max-content;
+          padding-bottom: 2rem;
+          border-bottom: 5px solid $secondary-color;
+      }
+  }
+}
+
+@include media-sm {
+  #detail-restaurant {  
+    .restaurant__img-wrap {  
+        .restaurant__img-item {
+            height: 325px;
+        }
+    }
+
+    .restaurant__detail {
+      padding: 0 2rem;
+    }
+  }
+}
+
+@include media-md {
+  #detail-restaurant {  
+    .restaurant__img-wrap {  
+        .restaurant__img-item {
+            height: 425px;
+        }
+    }
+
+    .restaurant__detail {
+      margin-top: 2rem;
+      @include row-gap(1.5rem);
+      padding: 0 3rem;
+
+      .restaurant__label {
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+      }
+    }
+  }
+}
+
+@include media-lg {
+  #detail-restaurant {  
+    .restaurant__img-wrap {  
+      border-radius: 8px;
+      .restaurant__img-item {
+          height: 375px;
+      }
+    }
+
+    .restaurant__detail {
+      padding: 0;
+    }
+  }
+}

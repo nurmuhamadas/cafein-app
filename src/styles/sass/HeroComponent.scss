@@ -1,0 +1,176 @@
+@import '../sass/variable';
+@import '../sass/responsive';
+#hero-section {
+    width: 100vw;
+    height: 540px;
+    margin-top: 100px;
+    padding: 1rem;
+    position: relative;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    transition: $transition;
+
+    &.heroElement__image-0 {
+        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_2.jpg');
+    }
+
+    &.heroElement__image-1 {
+        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_1.jpg');
+    }
+
+    &.heroElement__image-2 {
+        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_4.jpg');
+    }
+
+    .arrow {
+        display: none;
+        cursor: pointer;
+    }
+
+    .wrap {
+        width: 100%;
+        height: 400px;
+        margin: 125px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .tagline {
+            color: #dddddd;
+            text-align: center;
+            transition: $transition;
+        }
+
+        .arrow__down {
+            width: 40px;
+            height: auto;
+            position: relative;
+            color: #cccccc;
+            cursor: pointer;
+
+            .material-icons {
+                position: absolute;
+                font-size: 2.25rem;
+                top: -56px;
+
+                &:nth-child(2) {
+                    top: -44px;
+                }
+            }
+        }
+
+        .navigator {
+            width: auto;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include column-gap(.5rem);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+            cursor: pointer;
+
+            span {
+                width: 32px;
+                height: 8px;
+                background-color: #ffffff;
+                opacity: .5;
+                content: "";
+                transition: $transition;
+
+                &.active {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@include media-sm {
+    #hero-section {
+        padding: 1rem 2rem;
+    }
+}
+
+@include media-md {
+    #hero-section {
+        height: 650px;
+    
+        .arrow {
+            width: 75px;
+            height: 75px;
+            display: block;
+            background-color: #00000079;
+            border-radius: 50%;
+            color: white;
+            font-size: 3rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: $transition;
+
+            &.prev {
+                left: -35px;
+
+                .material-icons {
+                    right: 0;
+                }
+            }
+
+            &.next {
+                right: -35px;
+
+                .material-icons {
+                    left: 0;
+                }
+            }
+
+            .material-icons {
+                font-size: 3rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+    
+        .wrap {
+            height: 400px;
+            margin: 200px auto 0 auto;
+
+            .tagline {
+                width: 500px;
+            }
+
+            .arrow__down {    
+                .material-icons {
+                    font-size: 2.25rem;
+                    top: -76px;
+    
+                    &:nth-child(2) {
+                        top: -64px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-xl {
+    #hero-section {
+    
+        .wrap {
+            .tagline {
+                width: 650px;
+            }
+        }
+    }
+}

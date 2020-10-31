@@ -1,0 +1,64 @@
+@import './variable';
+
+.menu__wrap {
+  width: 100%;
+  height: max-content;
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: 8px;
+
+  .menu__title {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include column-gap(1rem);
+  }
+
+  .menu__list {
+    width: 100%;
+    height: max-content;
+    margin-top: 1rem;
+    list-style: none;
+
+    .menu__list-item {
+      width: 100%;
+      height: max-content;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      
+      svg {
+        margin-right: .75rem;
+      }
+    }
+  }
+
+  &.foods {
+    border: 7px $secondary-color solid;
+    border-bottom: none;
+
+    .menu__title .material-icons {
+      color: $secondary-color;
+    }
+
+    .menu__list .menu__list-item {
+      border-bottom: 1px $secondary-color solid;
+    }
+  }
+
+  &.drinks {
+    border: 7px $primary-color solid;
+    border-bottom: none;
+
+    .menu__title .material-icons {
+      color: $primary-color;
+    }
+
+    .menu__list .menu__list-item {
+      border-bottom: 1px $primary-color solid;
+    }
+  }
+}
