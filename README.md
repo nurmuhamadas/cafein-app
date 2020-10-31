@@ -76,9 +76,6 @@ Script
 - `npm run build` - to build into folder dist\
 - `npm lint` - linting
 
-### Demo online
-
-
 ---
 
 ## Tools
