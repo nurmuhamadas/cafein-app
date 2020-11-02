@@ -38,7 +38,7 @@ class Navbar extends HTMLElement {
   render() {
     this.innerHTML = `
             <header>
-                <a  class="company-logo">${CafeinLogo}</a> 
+                <a href="https://cafein.netlify.app" class="company-logo">${CafeinLogo}</a> 
                 <button class="btn__wrap">
                     <div  class="burger"></div>
                 </button>
