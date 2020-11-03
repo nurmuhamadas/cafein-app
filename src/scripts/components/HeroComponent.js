@@ -36,9 +36,9 @@ class HeroComponent extends HTMLElement {
 
     // hero swipe
     const heroSection = document.querySelector('#hero-section');
-    heroSection.addEventListener('touchstart', (event) => this._handleTouchStart(event));
-    heroSection.addEventListener('touchmove', (event) => this._handleTouchMove(event));
-    heroSection.addEventListener('touchend', () => this._handleTouchEnd());
+    heroSection.addEventListener('touchstart', (event) => this._handleTouchStart(event), { passive: true });
+    heroSection.addEventListener('touchmove', (event) => this._handleTouchMove(event), { passive: true });
+    heroSection.addEventListener('touchend', () => this._handleTouchEnd(), { passive: true });
 
     // arrow slide click
     this.querySelector('.next').addEventListener('click', () => this._nextElement());
