@@ -45,7 +45,21 @@
         }
 
         label {
-            display: none;
+            position: absolute;
+            top: 50%;
+            left: 1.5rem;
+            transform: translateY(-50%);
+            background-color: white;
+            padding: .25rem;
+            font-size: .875rem;
+            font-weight: 300;
+            transition: $transition;
+
+            &.focus {
+                top: -6px;
+                font-size: .75rem;
+                transform: translateY(0);
+            }
         }
 
         .btn__search {

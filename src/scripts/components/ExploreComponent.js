@@ -34,6 +34,16 @@ class ExploreComponent extends HTMLElement {
       });
   }
 
+  _handleFocusIn() {
+    this.querySelector('label').classList.add('focus');
+  }
+
+  _handleFocusOut() {
+    if (this._input === '') {
+      this.querySelector('label').classList.remove('focus');
+    }
+  }
+
   _handleInputChange(event) {
     this._input = event.target.value;
   }
@@ -58,6 +68,9 @@ class ExploreComponent extends HTMLElement {
   async connectedCallback() {
     this.render();
 
+    this.querySelector('input').addEventListener('focusin', () => this._handleFocusIn());
+    this.querySelector('input').addEventListener('focusout', () => this._handleFocusOut());
+
     this._handleRequestSuccess(this._restaurants);
 
     document.querySelector('input').addEventListener('change', (event) => this._handleInputChange(event));
@@ -72,7 +85,7 @@ class ExploreComponent extends HTMLElement {
                     <h2>Explore Restaurants</h2>
                 </div>
                 <div class="input-bar">
-                    <input id="search" type="text" placeholder="Masukkan nama restoran, kota..." value="">
+                    <input id="search" type="text" value="">
                     <label for="search">Masukkan nama restoran, kota...</label>
                     <button class="btn__search"><span class="material-icons">search</span></button>
                 </div>
