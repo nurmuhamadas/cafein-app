@@ -6,6 +6,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports = {
@@ -129,5 +130,6 @@ module.exports = {
         },
       ],
     }),
+    new BundleAnalyzerPlugin(),
   ],
 };
