@@ -4,6 +4,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports = {
   entry: {
@@ -60,6 +63,26 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
+    }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminMozjpeg({
+          quality: 50,
+          progressive: true,
+        }),
+      ],
+    }),
+    new ImageminWebpWebpackPlugin({
+      config: [{
+        test: /\.(jpe?g|png)/,
+        options: {
+          quality: 65,
+        },
+      }],
+      overrideExtension: true,
+      detailedLogs: false,
+      silent: false,
+      strict: true,
     }),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),
