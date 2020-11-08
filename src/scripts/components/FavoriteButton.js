@@ -1,15 +1,22 @@
 /* eslint-disable class-methods-use-this */
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import FavoriteRestaurantIdb from '../data/idb';
 import '../../styles/sass/FavoriteButton.scss';
 
 class FavoriteButton extends HTMLElement {
+  async _loadSwal() {
+    return import('sweetalert')
+      .then((module) => module.default);
+  }
+
   async _confirmSave() {
+    const swal = await this._loadSwal();
     const save = await swal('Do you want to save this restaurant info?');
     return save;
   }
 
   async _addRestaurantToDatabase() {
+    const swal = await this._loadSwal();
     try {
       if (await this._confirmSave()) {
         await FavoriteRestaurantIdb.putRestaurant(this._restaurant);
@@ -22,6 +29,7 @@ class FavoriteButton extends HTMLElement {
   }
 
   async _confirmDelete() {
+    const swal = await this._loadSwal();
     const _delete = await swal({
       title: 'Are you sure?',
       text: 'Once deleted, you will not be able to access this offline!',
@@ -33,6 +41,7 @@ class FavoriteButton extends HTMLElement {
   }
 
   async _deleteRestaurantFromDatabase() {
+    const swal = await this._loadSwal();
     try {
       if (await this._confirmDelete()) {
         await FavoriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
