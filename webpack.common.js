@@ -24,7 +24,6 @@ module.exports = {
       minChunks: 1,
       maxAsyncRequests: 30,
       maxInitialRequests: 30,
-      automaticNameDelimiter: '~',
       enforceSizeThreshold: 50000,
       cacheGroups: {
         defaultVendors: {
