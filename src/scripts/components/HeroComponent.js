@@ -27,7 +27,7 @@ class HeroComponent extends HTMLElement {
     this.render();
 
     // change hero item
-    this._heroChangeInterval = setInterval(() => this._nextElement(), 7000);
+    this._heroChangeInterval = setInterval(() => this._nextElement(), 12000);
 
     // navigator click
     this.querySelectorAll('.navigator span').forEach((navigator, index) => {
