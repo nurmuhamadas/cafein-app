@@ -13,8 +13,7 @@ import CacheHelper from './utils/cache-helper';
 precacheAndRoute([
   { url: '/index.html', revision: null },
   { url: '/sw.js', revision: null },
-  { url: '/app.bundle.js', revision: null },
-  { url: '/vendors~app.bundle.js', revision: null },
+  { url: '/app~._m.bundle.js', revision: null },
   { url: heroImage_1, revision: null },
   { url: heroImage_2, revision: null },
   { url: heroImage_3, revision: null },
