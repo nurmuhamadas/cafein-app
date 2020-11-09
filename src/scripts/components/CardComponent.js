@@ -1,5 +1,7 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-plusplus */
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../../styles/sass/CardComponent.scss';
 import './RatingComponent';
 
@@ -27,7 +29,7 @@ class CardComponent extends HTMLElement {
     this.innerHTML = `
             <div class="card__wrap">
                 <div class="img__wrap">
-                    <img class="card__thumbnail" width="328" height="216" src=${this._restaurant.pictureUrl} alt="${this._restaurant.name}">
+                    <img class="card__thumbnail lazyload" width="328" height="216" data-src=${this._restaurant.pictureUrl} alt="${this._restaurant.name}">
                 </div>
                 <div class="card__detail">
                     <div class="card__label">
