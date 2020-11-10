@@ -2,6 +2,9 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable camelcase */
 import '../../styles/sass/HeroComponent.scss';
+import arrowLeftIcon from '../../public/icons/keyboard_arrow_left-24px.svg';
+import arrowRightIcon from '../../public/icons/keyboard_arrow_right-24px.svg';
+import arrowDownIcon from '../../public/icons/keyboard_arrow_down-24px.svg';
 
 class HeroComponent extends HTMLElement {
   constructor(props) {
@@ -53,13 +56,13 @@ class HeroComponent extends HTMLElement {
     this.innerHTML = `
             <div id="hero-section" class="heroElement__image-0">
                 <button aria-label="next hero image" class="arrow prev">
-                    <span class="material-icons md-light">keyboard_arrow_left</span>
+                    <img class="material-icons md-light" src="${arrowLeftIcon}" alt="Arrow left icon" />
                 </button>
                 <div class="wrap">
                     <h1 class="tagline">Solusi tempat makan terbaik bersama keluarga ada disini</h1>
                     <a href="#top-section" class="arrow__down">
-                        <span class="material-icons">keyboard_arrow_down</span>
-                        <span class="material-icons">keyboard_arrow_down</span>
+                      <img class="material-icons" src="${arrowDownIcon}" alt="Arrow Down icon" />
+                      <img class="material-icons" src="${arrowDownIcon}" alt="Arrow Down icon" />
                     </a>
                     <div class="navigator">
                         <span class="active"></span>
@@ -68,7 +71,7 @@ class HeroComponent extends HTMLElement {
                     </div>
                 </div>
                 <button aria-label="Prev hero image" class="arrow next">
-                    <span class="material-icons md-light">keyboard_arrow_right</span>
+                  <img class="material-icons md-light" src="${arrowRightIcon}" alt="Arrow right icon" />
                 </button>
             </div>
         `;
