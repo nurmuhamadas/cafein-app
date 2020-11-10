@@ -13,7 +13,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    @include column-gap(1rem);
+    
+    .material-icons {
+      margin-right: 1rem;
+    }
   }
 
   .menu__list {
@@ -40,10 +43,6 @@
     border: 7px $secondary-color solid;
     border-bottom: none;
 
-    .menu__title .material-icons {
-      color: $secondary-color;
-    }
-
     .menu__list .menu__list-item {
       border-bottom: 1px $secondary-color solid;
     }
@@ -52,10 +51,6 @@
   &.drinks {
     border: 7px $primary-color solid;
     border-bottom: none;
-
-    .menu__title .material-icons {
-      color: $primary-color;
-    }
 
     .menu__list .menu__list-item {
       border-bottom: 1px $primary-color solid;
