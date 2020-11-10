@@ -1,6 +1,9 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable class-methods-use-this */
 import '../../styles/sass/RatingComponent.scss';
+import starIcon from '../../public/icons/star-24px.svg';
+import starHalfIcon from '../../public/icons/star_half-24px.svg';
+import starBorderIcon from '../../public/icons/star_outline-24px.svg';
 
 class RatingComponent extends HTMLElement {
   constructor() {
@@ -20,21 +23,21 @@ class RatingComponent extends HTMLElement {
   _renderFullFilledStar(rating) {
     let stars = '';
     for (let i = 0; i < rating; i++) {
-      stars += '<span class="material-icons">star</span>';
+      stars += `<img class="material-icons" src="${starIcon}" alt="Star icon" />`;
     }
     return stars;
   }
 
   _renderHalfStar(rating) {
     if (rating.integer === '5') return '';
-    if (rating.decimal > 5) return '<span class="material-icons">star_half</span>';
-    return '<span class="material-icons">star_border</span>';
+    if (rating.decimal > 5) return `<img class="material-icons" src="${starHalfIcon}" alt="Star icon" />`;
+    return `<img class="material-icons" src="${starBorderIcon}" alt="Star icon" />`;
   }
 
   _renderOutlinedStar(rating) {
     let stars = '';
     for (let i = 0; i < 4 - rating; i++) {
-      stars += '<span class="material-icons">star_border</span>';
+      stars += `<img class="material-icons" src="${starBorderIcon}" alt="Star icon" />`;
     }
     return stars;
   }
