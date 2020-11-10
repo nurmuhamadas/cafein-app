@@ -88,7 +88,7 @@ class ExploreComponent extends HTMLElement {
                 <div class="input-bar">
                     <input id="search" type="text" value="">
                     <label for="search">Masukkan nama restoran, kota...</label>
-                    <button class="btn__search"><img class="material-icons" src="${searchIcon}" alt="search icon" /></button>
+                    <button class="btn__search"><img width="24" height="24" class="material-icons" src="${searchIcon}" alt="search icon" /></button>
                 </div>
                 <div class="error"></div>
                 <div class="wrap"></div>

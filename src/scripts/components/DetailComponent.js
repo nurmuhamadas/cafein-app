@@ -27,7 +27,7 @@ class DetailComponent extends HTMLElement {
           <div class="restaurant__category"></div>
           <div class="restaurant__label">
             <rating-component rating="${this._restaurant.rating}"></rating-component>
-            <p class="restaurant__label-location"><img class="material-icons" src="${locationIcon}" alt="location icon" /> ${this._restaurant.address}, ${this._restaurant.city}</p>
+            <p class="restaurant__label-location"><img width="24" height="24" class="material-icons" src="${locationIcon}" alt="location icon" /> ${this._restaurant.address}, ${this._restaurant.city}</p>
           </div>
           <h2 class="restaurant__name">${this._restaurant.name}</h2>
           <p class="restaurant__description">${this._restaurant.description}</p>

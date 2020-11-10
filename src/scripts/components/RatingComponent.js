@@ -23,21 +23,21 @@ class RatingComponent extends HTMLElement {
   _renderFullFilledStar(rating) {
     let stars = '';
     for (let i = 0; i < rating; i++) {
-      stars += `<img class="material-icons" src="${starIcon}" alt="Star icon" />`;
+      stars += `<img width="24" height="24" class="material-icons" src="${starIcon}" alt="Star icon" />`;
     }
     return stars;
   }
 
   _renderHalfStar(rating) {
     if (rating.integer === '5') return '';
-    if (rating.decimal > 5) return `<img class="material-icons" src="${starHalfIcon}" alt="Star icon" />`;
-    return `<img class="material-icons" src="${starBorderIcon}" alt="Star icon" />`;
+    if (rating.decimal > 5) return `<img width="24" height="24" class="material-icons" src="${starHalfIcon}" alt="Star icon" />`;
+    return `<img width="24" height="24" class="material-icons" src="${starBorderIcon}" alt="Star icon" />`;
   }
 
   _renderOutlinedStar(rating) {
     let stars = '';
     for (let i = 0; i < 4 - rating; i++) {
-      stars += `<img class="material-icons" src="${starBorderIcon}" alt="Star icon" />`;
+      stars += `<img width="24" height="24" class="material-icons" src="${starBorderIcon}" alt="Star icon" />`;
     }
     return stars;
   }

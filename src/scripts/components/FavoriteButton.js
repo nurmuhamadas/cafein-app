@@ -71,7 +71,7 @@ class FavoriteButton extends HTMLElement {
   async _renderSaveButton() {
     this.innerHTML = `
       <button>
-        <img class="material-icons save" src="${favoriteButton}" alt="Favorite button" />
+        <img width="24" height="24" class="material-icons save" src="${favoriteButton}" alt="Favorite button" />
       </button>
     `;
   }
@@ -79,7 +79,7 @@ class FavoriteButton extends HTMLElement {
   async _renderDeleteButton() {
     this.innerHTML = `
     <button>
-      <img class="material-icons save" src="${deleteButton}" alt="Delete button" />
+      <img width="24" height="24" class="material-icons save" src="${deleteButton}" alt="Delete button" />
     </button>
   `;
   }

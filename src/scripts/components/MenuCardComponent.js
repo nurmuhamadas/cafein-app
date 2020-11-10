@@ -32,7 +32,7 @@ class MenuCardComponent extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="menu__wrap ${this._name}">
-        <h3 class="menu__title">${this._name === 'foods' ? `<img class="material-icons" src="${foodIcon}" alt="Food Icon" />` : `<img class="material-icons" src="${drinkIcon}" alt="Drink Icon" />`}</img> ${this._capitalizeFirstLetter(this._name)}</h3>
+        <h3 class="menu__title">${this._name === 'foods' ? `<img width="24" height="24" class="material-icons" src="${foodIcon}" alt="Food Icon" />` : `<img width="24" height="24" class="material-icons" src="${drinkIcon}" alt="Drink Icon" />`}</img> ${this._capitalizeFirstLetter(this._name)}</h3>
         <ul class="menu__list"></ul>
       </div>
     `;
