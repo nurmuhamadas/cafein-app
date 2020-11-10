@@ -57,13 +57,25 @@ module.exports = {
             loader: 'css-loader',
           },
         ],
-      }, {
+      },
+      {
         test: /\.(png|jpe?g|gif)$/i,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
           outputPath: 'images',
         },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
       },
     ],
   },
