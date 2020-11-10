@@ -16,22 +16,39 @@ class TopRestaurantComponent extends HTMLElement {
     });
   }
 
+  _insertSkeleton(count) {
+    for (let index = 0; index < count; index++) {
+      this._insertElement('card-component');
+    }
+  }
+
   _insertElement(element, data) {
     const wrapper = this.querySelector('.wrap');
     const childElement = document.createElement(element);
+    childElement.isLoading = this._isLoading;
     childElement.restaurant = data;
     wrapper.appendChild(childElement);
   }
 
   set data(restaurants) {
-    this._restaurants = [...restaurants];
+    if (!this._isLoading) {
+      this._restaurants = [...restaurants];
+    }
+  }
+
+  set isLoading(isloading) {
+    this._isLoading = isloading;
   }
 
   async connectedCallback() {
     this.render();
 
-    const sortedRestaurants = this._sortByRating(this._restaurants);
-    this._mapData(sortedRestaurants);
+    if (!this._isLoading) {
+      const sortedRestaurants = this._sortByRating(this._restaurants);
+      this._mapData(sortedRestaurants);
+    } else {
+      this._insertSkeleton(3);
+    }
   }
 
   render() {

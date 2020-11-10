@@ -15,15 +15,26 @@ class ExploreComponent extends HTMLElement {
     data.forEach((restaurant) => this._insertElement('card-component', { ...restaurant, pictureUrl: RestaurantApi.getPictureUrl(restaurant.pictureId, 'small') }));
   }
 
+  _insertSkeleton(count) {
+    for (let index = 0; index < count; index++) {
+      this._insertElement('card-component');
+    }
+  }
+
   _insertElement(element, data) {
     const wrapper = this.querySelector('.wrap');
     const childElement = document.createElement(element);
+    childElement.isLoading = this._isLoading;
     childElement.restaurant = data;
     wrapper.appendChild(childElement);
   }
 
   _handleRequestSuccess(restaurants) {
-    this._mapData(restaurants);
+    if (this._isLoading) {
+      this._insertSkeleton(20);
+    } else {
+      this._mapData(restaurants);
+    }
   }
 
   _handleError() {
@@ -64,6 +75,10 @@ class ExploreComponent extends HTMLElement {
 
   set data(restaurants) {
     this._restaurants = restaurants;
+  }
+
+  set isLoading(isLoading) {
+    this._isLoading = isLoading;
   }
 
   async connectedCallback() {

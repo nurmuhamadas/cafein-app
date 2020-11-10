@@ -1,59 +1,59 @@
-/* eslint-disable camelcase */
-/* eslint-disable no-restricted-globals */
-import 'regenerator-runtime';
-import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
-import { precacheAndRoute } from 'workbox-precaching';
-import { registerRoute } from 'workbox-routing';
-import { ExpirationPlugin } from 'workbox-expiration';
-import heroImage_1 from '../public/images/hero-image_2.jpg';
-import heroImage_2 from '../public/images/hero-image_1.jpg';
-import heroImage_3 from '../public/images/hero-image_4.jpg';
-import CacheHelper from './utils/cache-helper';
+// /* eslint-disable camelcase */
+// /* eslint-disable no-restricted-globals */
+// import 'regenerator-runtime';
+// import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
+// import { precacheAndRoute } from 'workbox-precaching';
+// import { registerRoute } from 'workbox-routing';
+// import { ExpirationPlugin } from 'workbox-expiration';
+// import heroImage_1 from '../public/images/hero-image_2.jpg';
+// import heroImage_2 from '../public/images/hero-image_1.jpg';
+// import heroImage_3 from '../public/images/hero-image_4.jpg';
+// import CacheHelper from './utils/cache-helper';
 
-precacheAndRoute([
-  { url: '/index.html', revision: null },
-  { url: '/sw.js', revision: null },
-  { url: '/app~3d9b8e9e.bundle.js', revision: null },
-  { url: heroImage_1, revision: null },
-  { url: heroImage_2, revision: null },
-  { url: heroImage_3, revision: null },
-]);
+// precacheAndRoute([
+//   { url: '/index.html', revision: null },
+//   { url: '/sw.js', revision: null },
+//   { url: '/app~3d9b8e9e.bundle.js', revision: null },
+//   { url: heroImage_1, revision: null },
+//   { url: heroImage_2, revision: null },
+//   { url: heroImage_3, revision: null },
+// ]);
 
-registerRoute(
-  CacheHelper.matchOrigin,
-  new CacheFirst({
-    cacheName: 'assets',
-  }),
-);
+// registerRoute(
+//   CacheHelper.matchOrigin,
+//   new CacheFirst({
+//     cacheName: 'assets',
+//   }),
+// );
 
-registerRoute(
-  /\.(?:png|gif|jpg|jpeg|svg)$/,
-  new CacheFirst(),
-);
+// registerRoute(
+//   /\.(?:png|gif|jpg|jpeg|svg)$/,
+//   new CacheFirst(),
+// );
 
-registerRoute(
-  CacheHelper.matchFont,
-  new CacheFirst({
-    cacheName: 'assets',
-  }),
-);
+// registerRoute(
+//   CacheHelper.matchFont,
+//   new CacheFirst({
+//     cacheName: 'assets',
+//   }),
+// );
 
-registerRoute(
-  CacheHelper.matchApi,
-  new StaleWhileRevalidate({
-    cacheName: 'database',
-    plugins: [
-      new ExpirationPlugin({
-        maxAgeSeconds: 30 * 24 * 60 * 60,
-        maxEntries: 100,
-      }),
-    ],
-  }),
-);
+// registerRoute(
+//   CacheHelper.matchApi,
+//   new StaleWhileRevalidate({
+//     cacheName: 'database',
+//     plugins: [
+//       new ExpirationPlugin({
+//         maxAgeSeconds: 30 * 24 * 60 * 60,
+//         maxEntries: 100,
+//       }),
+//     ],
+//   }),
+// );
 
-registerRoute(
-  '/app.bundle.js',
-  new StaleWhileRevalidate({
-    cacheName: 'assets',
-  }),
-);
+// registerRoute(
+//   '/app.bundle.js',
+//   new StaleWhileRevalidate({
+//     cacheName: 'assets',
+//   }),
+// );

@@ -2,22 +2,23 @@ import '../../components/HeroComponent';
 import '../../components/TopRestaurantComponent';
 import '../../components/ExploreComponent';
 import RestaurantApi from '../../data/restaurant-api';
-import LoaderInitiator from '../../utils/loader-initiator';
 
 const homePage = {
   insertElement(component, data) {
     const container = document.querySelector('#home-page');
     const child = document.createElement(component);
+    child.isLoading = !data;
     child.data = data;
     container.appendChild(child);
   },
 
   async afterRender() {
-    const container = document.querySelector('#home-page');
-    LoaderInitiator.init(container);
+    this.insertElement('hero-component');
+    this.insertElement('toprestaurant-component');
+    this.insertElement('explore-component');
     try {
       const response = await RestaurantApi.getAllRestaurants();
-      LoaderInitiator.clear(container);
+      document.querySelector('#home-page').innerHTML = '';
       this.insertElement('hero-component', {});
       this.insertElement('toprestaurant-component', response.data.restaurants);
       this.insertElement('explore-component', response.data.restaurants);
