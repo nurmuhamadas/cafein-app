@@ -4,6 +4,8 @@ import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../../styles/sass/CardComponent.scss';
 import './RatingComponent';
+import locationIcon from '../../public/icons/location_on-24px.svg';
+import visibilityIcon from '../../public/icons/visibility-24px.svg';
 
 class CardComponent extends HTMLElement {
   _limitDescription(description) {
@@ -33,12 +35,12 @@ class CardComponent extends HTMLElement {
                 </div>
                 <div class="card__detail">
                     <div class="card__label">
-                        <div class="location"><span class="material-icons">location_on</span> ${this._restaurant.city}</div>
+                        <div class="location"><img class="material-icons" src="${locationIcon}" alt="location icon" /> ${this._restaurant.city}</div>
                         <rating-component rating="${this._restaurant.rating}"></rating-component>
                     </div>
                     <h3 class="card__title">${this._restaurant.name}</h3>
                     <p class="card__desc">${this._limitDescription(this._restaurant.description)}</p>
-                    <a href="#/detail/${this._restaurant.id}/${this._isSaved ? 'saved' : ''}" class="card__action"><span class="material-icons">visibility</span> Lihat detail</a>
+                    <a href="#/detail/${this._restaurant.id}/${this._isSaved ? 'saved' : ''}" class="card__action"><img class="material-icons" src="${visibilityIcon}" alt="visibility icon" /> Lihat detail</a>
                 </div>
             </div>
         `;
