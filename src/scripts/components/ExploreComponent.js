@@ -2,6 +2,7 @@
 import '../../styles/sass/ExploreComponent.scss';
 import './CardComponent';
 import RestaurantApi from '../data/restaurant-api';
+import searchIcon from '../../public/icons/search-24px.svg';
 
 class ExploreComponent extends HTMLElement {
   constructor(props) {
@@ -87,7 +88,7 @@ class ExploreComponent extends HTMLElement {
                 <div class="input-bar">
                     <input id="search" type="text" value="">
                     <label for="search">Masukkan nama restoran, kota...</label>
-                    <button class="btn__search"><span class="material-icons">search</span></button>
+                    <button class="btn__search"><img class="material-icons" src="${searchIcon}" alt="search icon" /></button>
                 </div>
                 <div class="error"></div>
                 <div class="wrap"></div>
