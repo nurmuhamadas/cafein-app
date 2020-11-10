@@ -13,10 +13,6 @@ favorite-button {
   border-radius: 50%;
   background-color: lighten($color: $secondary-color, $amount: 25%);
   box-shadow: 0 0 10px #aaaaaa79;
-  
-  .material-icons {
-    color: white;
-  }
 }
 
 @include media-sm {

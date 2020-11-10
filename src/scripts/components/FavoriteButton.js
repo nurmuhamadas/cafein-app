@@ -2,6 +2,8 @@
 // import swal from 'sweetalert';
 import FavoriteRestaurantIdb from '../data/idb';
 import '../../styles/sass/FavoriteButton.scss';
+import favoriteButton from '../../public/icons/favorite-24px.svg';
+import deleteButton from '../../public/icons/delete_forever-24px.svg';
 
 class FavoriteButton extends HTMLElement {
   async _loadSwal() {
@@ -69,7 +71,7 @@ class FavoriteButton extends HTMLElement {
   async _renderSaveButton() {
     this.innerHTML = `
       <button>
-        <span class="material-icons save">favorite</span>
+        <img class="material-icons save" src="${favoriteButton}" alt="Favorite button" />
       </button>
     `;
   }
@@ -77,7 +79,7 @@ class FavoriteButton extends HTMLElement {
   async _renderDeleteButton() {
     this.innerHTML = `
     <button>
-      <span class="material-icons save">delete_forever</span>
+      <img class="material-icons save" src="${deleteButton}" alt="Delete button" />
     </button>
   `;
   }
