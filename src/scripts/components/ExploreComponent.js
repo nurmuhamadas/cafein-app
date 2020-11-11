@@ -9,6 +9,7 @@ class ExploreComponent extends HTMLElement {
     super(props);
 
     this._input = '';
+    this._isLoading = true;
   }
 
   _mapData(data) {
@@ -24,7 +25,6 @@ class ExploreComponent extends HTMLElement {
   _insertElement(element, data) {
     const wrapper = this.querySelector('.wrap');
     const childElement = document.createElement(element);
-    childElement.isLoading = this._isLoading;
     childElement.restaurant = data;
     wrapper.appendChild(childElement);
   }
@@ -75,10 +75,7 @@ class ExploreComponent extends HTMLElement {
 
   set data(restaurants) {
     this._restaurants = restaurants;
-  }
-
-  set isLoading(isLoading) {
-    this._isLoading = isLoading;
+    this._isLoading = !restaurants;
   }
 
   async connectedCallback() {

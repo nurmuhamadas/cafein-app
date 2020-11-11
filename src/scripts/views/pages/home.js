@@ -6,7 +6,6 @@ const homePage = {
   insertElement(component, data) {
     const container = document.querySelector('#home-page');
     const child = document.createElement(component);
-    child.isLoading = !data;
     child.data = data;
     container.appendChild(child);
   },

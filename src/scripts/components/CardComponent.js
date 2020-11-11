@@ -8,6 +8,11 @@ import locationIcon from '../../public/icons/location_on-24px.svg';
 import visibilityIcon from '../../public/icons/visibility-24px.svg';
 
 class CardComponent extends HTMLElement {
+  constructor() {
+    super();
+    this._isLoading = true;
+  }
+
   _limitDescription(description) {
     if (description.length < 100) {
       return description;
@@ -21,10 +26,7 @@ class CardComponent extends HTMLElement {
 
   set restaurant(restaurant) {
     this._restaurant = restaurant;
-  }
-
-  set isLoading(isloading) {
-    this._isLoading = isloading;
+    this._isLoading = !restaurant;
   }
 
   connectedCallback() {
