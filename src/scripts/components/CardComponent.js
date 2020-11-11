@@ -1,5 +1,3 @@
-import 'lazysizes';
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../../styles/sass/CardComponent.scss';
 import './RatingComponent';
 import locationIcon from '../../public/icons/location_on-24px.svg';
