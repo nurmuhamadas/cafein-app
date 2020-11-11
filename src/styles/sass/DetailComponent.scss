@@ -2,6 +2,44 @@
 @import './variable';
 
 #detail-restaurant {
+
+  &.skeleton {
+    .restaurant__img-wrap {
+      height: 220px;
+      background-color: #bbbbbb;
+    }
+
+    .restaurant__detail {
+      width: 100%;
+      height: 375px;
+      display: flex;
+
+      .restaurant__category {
+        width: 100%;
+        height: 30px;
+        background-color: #eeeeee;
+      }
+
+      .restaurant__label {
+        width: 100%;
+        height: 36px;
+        background-color: #eeeeee;
+      }
+  
+      .restaurant__name {
+        width: 100%;
+        height: 33px;
+        background-color: #eeeeee;
+      }
+  
+      .restaurant__description {
+        width: 100%;
+        height: 250px;
+        background-color: #eeeeee;
+      }
+    }
+  }
+
   width: 100%;
   height: max-content;
 
