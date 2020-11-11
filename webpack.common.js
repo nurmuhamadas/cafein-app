@@ -83,6 +83,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
+      favicon: path.resolve(__dirname, 'src/public/icons/cafein-logo.png'),
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -125,15 +126,13 @@ module.exports = {
       display: 'standalone',
       start_url: '/',
       orientation: 'portrait',
+      ios: true,
       icons: [
         {
           src: path.resolve(__dirname, 'src/public/icons/cafein-logo.png'),
           sizes: [16, 32, 72, 96, 128, 192, 256, 384, 512],
           ios: true,
-        },
-        {
-          src: path.resolve(__dirname, 'src/public/icons/cafein-logo.png'),
-          size: '1024x1024',
+          destination: 'dist/icons/',
         },
         {
           src: path.resolve(__dirname, 'src/public/icons/cafein-logo.png'),
