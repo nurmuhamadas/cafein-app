@@ -132,7 +132,7 @@ module.exports = {
           src: path.resolve(__dirname, 'src/public/icons/cafein-logo.png'),
           sizes: [16, 32, 72, 96, 128, 192, 256, 384, 512],
           ios: true,
-          destination: 'dist/icons/',
+          destination: 'icons/',
         },
         {
           src: path.resolve(__dirname, 'src/public/icons/cafein-logo.png'),
