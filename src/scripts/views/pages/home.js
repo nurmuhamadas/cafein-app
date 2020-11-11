@@ -1,4 +1,3 @@
-import '../../components/HeroComponent';
 import '../../components/TopRestaurantComponent';
 import '../../components/ExploreComponent';
 import RestaurantApi from '../../data/restaurant-api';
@@ -13,9 +12,9 @@ const homePage = {
   },
 
   async afterRender() {
-    this.insertElement('hero-component');
-    this.insertElement('toprestaurant-component');
-    this.insertElement('explore-component');
+    // this.insertElement('hero-component');
+    // this.insertElement('toprestaurant-component');
+    // this.insertElement('explore-component');
     try {
       const response = await RestaurantApi.getAllRestaurants();
       document.querySelector('#home-page').innerHTML = '';
