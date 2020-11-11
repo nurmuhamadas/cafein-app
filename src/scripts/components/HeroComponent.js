@@ -4,6 +4,19 @@ import arrowLeftIcon from '../../public/icons/keyboard_arrow_left-24px.svg';
 import arrowRightIcon from '../../public/icons/keyboard_arrow_right-24px.svg';
 import arrowDownIcon from '../../public/icons/keyboard_arrow_down-24px.svg';
 
+const image = [
+  'images/hero-image_2',
+  'images/hero-image_1',
+  'images/hero-image_4',
+];
+
+const imageElement = (index) => `
+  <source media="(min-width:768px)" srcset="${image[index]}.webp">
+  <source media="(min-width:768px)" srcset="${image[index]}.png">
+  <source srcset="${image[index]}-small.webp">
+  <img class="hero-image" src="${image[index]}-small.png" alt="Flowers">
+`;
+
 class HeroComponent extends HTMLElement {
   constructor(props) {
     super(props);
@@ -52,7 +65,14 @@ class HeroComponent extends HTMLElement {
 
   render() {
     this.innerHTML = `
-            <div id="hero-section" class="heroElement__image-0">
+            <div id="hero-section">
+                <picture>
+                  <source media="(min-width:768px)" srcset="${image[0]}.webp">
+                  <source media="(min-width:768px)" srcset="${image[0]}.jpg">
+                  <source srcset="${image[0]}-small.webp">
+                  <img class="hero-image" src="${image[0]}-small.jpg" alt="Flowers">
+                </picture>
+                <div class="layer"></div>
                 <button aria-label="next hero image" class="arrow prev">
                     <img width="36" height="36" class="material-icons md-light" src="${arrowLeftIcon}" alt="Arrow left icon" />
                 </button>
@@ -77,7 +97,7 @@ class HeroComponent extends HTMLElement {
 
   _handleHeroElementChange() {
     const { index } = this.state;
-    const heroSection = document.querySelector('#hero-section');
+    const heroSection = document.querySelector('#hero-section picture');
     const taglineElement = this.querySelector('.tagline');
     const navigatorElements = this.querySelectorAll('.navigator span');
 
@@ -88,8 +108,8 @@ class HeroComponent extends HTMLElement {
 
     taglineElement.innerHTML = this.state.tagline[index % 3];
 
-    heroSection.classList.remove(...heroSection.classList);
-    heroSection.classList.add(`heroElement__image-${index}`);
+    // heroSection.classList.remove(...heroSection.classList);
+    heroSection.innerHTML = imageElement(index);
   }
 
   _handleNavigatorClick(i) {

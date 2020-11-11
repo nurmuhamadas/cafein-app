@@ -11,31 +11,44 @@
     background-repeat: no-repeat !important;
     transition: $transition;
 
-    &.heroElement__image-0 {
-        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_2-small.jpg');
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
     }
 
-    &.heroElement__image-1 {
-        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_1-small.jpg');
-    }
-
-    &.heroElement__image-2 {
-        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_4-small.jpg');
+    .layer {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25));
+        z-index: 1;
     }
 
     .arrow {
         display: none;
         cursor: pointer;
+        z-index: 2;
     }
 
     .wrap {
-        width: 100%;
+        width: 90%;
         height: 400px;
-        margin: 125px auto 0 auto;
+        position: absolute;
+        top: 125px;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        z-index: 2;
 
         .tagline {
             color: #dddddd;
@@ -154,7 +167,7 @@
     
         .wrap {
             height: 400px;
-            margin: 200px auto 0 auto;
+            top: 200px;
 
             .tagline {
                 width: 500px;
