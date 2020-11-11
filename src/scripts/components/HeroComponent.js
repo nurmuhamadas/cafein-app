@@ -70,7 +70,7 @@ class HeroComponent extends HTMLElement {
                   <source media="(min-width:768px)" srcset="${image[0]}.webp">
                   <source media="(min-width:768px)" srcset="${image[0]}.jpg">
                   <source srcset="${image[0]}-small.webp">
-                  <img class="hero-image" src="${image[0]}-small.jpg" alt="Flowers">
+                  <img width="360" height="540" class="hero-image" src="${image[0]}-small.jpg" alt="Flowers">
                 </picture>
                 <div class="layer"></div>
                 <button aria-label="next hero image" class="arrow prev">
