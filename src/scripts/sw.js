@@ -52,7 +52,7 @@ registerRoute(
 );
 
 registerRoute(
-  '/app.bundle.js',
+  '/app~3d9b8e9e.bundle.js',
   new StaleWhileRevalidate({
     cacheName: 'assets',
   }),
