@@ -94,6 +94,7 @@ module.exports = {
       ],
     }),
     new ImageminWebpackPlugin({
+      minFileSize: 32000,
       plugins: [
         ImageminMozjpeg({
           quality: 50,
