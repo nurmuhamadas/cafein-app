@@ -4,6 +4,12 @@ import './CardComponent';
 import RestaurantApi from '../data/restaurant-api';
 
 class TopRestaurantComponent extends HTMLElement {
+  constructor(props) {
+    super(props);
+
+    this._isLoading = true;
+  }
+
   _sortByRating(data) {
     return data.sort((a, b) => b.rating - a.rating);
   }
@@ -31,13 +37,10 @@ class TopRestaurantComponent extends HTMLElement {
   }
 
   set data(restaurants) {
+    this._isLoading = !restaurants;
     if (!this._isLoading) {
       this._restaurants = [...restaurants];
     }
-  }
-
-  set isLoading(isloading) {
-    this._isLoading = isloading;
   }
 
   async connectedCallback() {
