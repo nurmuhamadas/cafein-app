@@ -28,7 +28,11 @@ const homePage = {
 
   render() {
     return `
-      <div id="home-page"></div>
+      <div id="home-page">
+        <hero-component></hero-component>
+        <toprestaurant-component></toprestaurant-component>
+        <explore-component></explore-component>
+      </div>
     `;
   },
 };
