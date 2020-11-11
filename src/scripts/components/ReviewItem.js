@@ -28,7 +28,7 @@ class ReviewItem extends HTMLElement {
       <picture>
         <source type="image/webp" srcset="${this._randomAvatar()}">
         <source type="image/jpeg" srcset="${this._randomAvatar()}">
-        <img class="review__img-inner" src="${this._randomAvatar()}" alt="">
+        <img class="review__img-outter" src="${this._randomAvatar()}" alt="">
       </picture>
       <div class="review__wrap">
         <div class="review__header">
