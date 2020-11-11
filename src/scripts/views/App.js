@@ -1,6 +1,5 @@
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
-import '../components/LoaderComponent';
 
 class App {
   constructor(root) {

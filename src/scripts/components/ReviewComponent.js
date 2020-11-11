@@ -75,7 +75,6 @@ class ReviewComponent extends HTMLElement {
 
   set data(reviews) {
     this._reviews = reviews;
-    console.log(reviews);
   }
 
   connectedCallback() {
