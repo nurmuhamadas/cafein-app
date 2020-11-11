@@ -11,9 +11,6 @@ const homePage = {
   },
 
   async afterRender() {
-    // this.insertElement('hero-component');
-    // this.insertElement('toprestaurant-component');
-    // this.insertElement('explore-component');
     try {
       const response = await RestaurantApi.getAllRestaurants();
       document.querySelector('#home-page').innerHTML = '';
