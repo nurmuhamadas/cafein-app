@@ -8,6 +8,9 @@ import { ExpirationPlugin } from 'workbox-expiration';
 import heroImage_1 from '../public/images/hero-image_2.jpg';
 import heroImage_2 from '../public/images/hero-image_1.jpg';
 import heroImage_3 from '../public/images/hero-image_4.jpg';
+import heroImageSmall_1 from '../public/images/hero-image_2-small.jpg';
+import heroImageSmall_2 from '../public/images/hero-image_1-small.jpg';
+import heroImageSmall_3 from '../public/images/hero-image_4-small.jpg';
 import CacheHelper from './utils/cache-helper';
 
 precacheAndRoute([
@@ -17,6 +20,9 @@ precacheAndRoute([
   { url: heroImage_1, revision: null },
   { url: heroImage_2, revision: null },
   { url: heroImage_3, revision: null },
+  { url: heroImageSmall_1, revision: null },
+  { url: heroImageSmall_2, revision: null },
+  { url: heroImageSmall_3, revision: null },
 ]);
 
 registerRoute(
