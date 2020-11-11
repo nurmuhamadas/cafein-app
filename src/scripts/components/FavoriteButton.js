@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-// import swal from 'sweetalert';
 import FavoriteRestaurantIdb from '../data/idb';
 import '../../styles/sass/FavoriteButton.scss';
 import favoriteButton from '../../public/icons/favorite-24px.svg';

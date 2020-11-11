@@ -1,5 +1,4 @@
 /* eslint-disable camelcase */
-/* eslint-disable class-methods-use-this */
 import '../../styles/sass/ReviewItem.scss';
 
 const avatar_1 = './images/avatar_1.webp';

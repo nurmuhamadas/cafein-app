@@ -16,6 +16,7 @@
         "global-require": 0,
         "eslint linebreak-style": [0, "error", "windows"],
         "no-underscore-dangle": "off",
-        "no-plusplus": 0
+        "no-plusplus": 0,
+        "class-methods-use-this": 0
     }
 }

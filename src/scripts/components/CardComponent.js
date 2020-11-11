@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-plusplus */
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../../styles/sass/CardComponent.scss';

@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import '../../styles/sass/ExploreComponent.scss';
 import './CardComponent';
 import RestaurantApi from '../data/restaurant-api';

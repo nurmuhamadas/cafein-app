@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 /* eslint-disable camelcase */
 import '../../styles/sass/HeroComponent.scss';
 import arrowLeftIcon from '../../public/icons/keyboard_arrow_left-24px.svg';

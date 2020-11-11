@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 /* eslint-disable max-len */
-/* eslint-disable class-methods-use-this */
 import '../../styles/sass/ReviewComponent.scss';
 import './ReviewItem';
 import RestaurantApi from '../data/restaurant-api';

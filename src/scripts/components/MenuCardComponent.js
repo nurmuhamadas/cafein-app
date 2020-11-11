@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import '../../styles/sass/MenuCardComponent.scss';
 import ListIcon from '../../public/icons/ListIcon';
 import ListIconSecondary from '../../public/icons/ListIconSecondary';

@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import '../../styles/sass/RatingComponent.scss';
 import starIcon from '../../public/icons/star-24px.svg';
 import starHalfIcon from '../../public/icons/star_half-24px.svg';
