@@ -11,44 +11,31 @@
     background-repeat: no-repeat !important;
     transition: $transition;
 
-    .hero-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 0;
+    &.heroElement__image-0 {
+        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_2-small.jpg');
     }
 
-    .layer {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-image: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25));
-        z-index: 1;
+    &.heroElement__image-1 {
+        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_1-small.jpg');
+    }
+
+    &.heroElement__image-2 {
+        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_4-small.jpg');
     }
 
     .arrow {
         display: none;
         cursor: pointer;
-        z-index: 2;
     }
 
     .wrap {
-        width: 90%;
+        width: 100%;
         height: 400px;
-        position: absolute;
-        top: 125px;
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 125px auto 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        z-index: 2;
 
         .tagline {
             color: #dddddd;
@@ -167,7 +154,7 @@
     
         .wrap {
             height: 400px;
-            top: 200px;
+            margin: 200px auto 0 auto;
 
             .tagline {
                 width: 500px;
@@ -188,6 +175,7 @@
 
 @include media-xl {
     #hero-section {
+    
         .wrap {
             .tagline {
                 width: 650px;
