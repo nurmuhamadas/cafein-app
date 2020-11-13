@@ -84,15 +84,15 @@ button {
 }
 
 .skip-link {
+    top: 0;
+
     &:focus {
-        top: -40px;
         left: 0;
         background-color: #C70039;
         color: white;
         padding: 8px;
         box-shadow: 0 0 10px #00000033;
         z-index: 999;
-        top: 0;
      }
  }
   
