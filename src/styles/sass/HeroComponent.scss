@@ -12,15 +12,15 @@
     transition: $transition;
 
     &.heroElement__image-0 {
-        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_2-small.jpg');
+        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_2-small.webp');
     }
 
     &.heroElement__image-1 {
-        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_1-small.jpg');
+        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_1-small.webp');
     }
 
     &.heroElement__image-2 {
-        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_4-small.jpg');
+        background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_4-small.webp');
     }
 
     .arrow {
@@ -101,15 +101,15 @@
         height: 650px;
 
         &.heroElement__image-0 {
-            background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_2.jpg');
+            background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_2.webp');
         }
     
         &.heroElement__image-1 {
-            background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_1.jpg');
+            background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_1.webp');
         }
     
         &.heroElement__image-2 {
-            background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_4.jpg');
+            background: linear-gradient(to right, rgba(0,0,0,.75), rgba(87, 24, 69, .25)), url('../../public/images/hero-image_4.webp');
         }
     
         .arrow {
