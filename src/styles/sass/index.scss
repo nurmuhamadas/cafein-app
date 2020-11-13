@@ -63,21 +63,21 @@ button {
     cursor: pointer;
     
     &.outlined {
-        border: 1px solid #ff6200;
-        color: #ff6200;
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
 
         &:hover {
-            background-color: $primary-color;
+            background-color: $secondary-color;
             color: white;
         }
     }
 
     &.filled {
-        background-color: $primary-color;
+        background-color: $secondary-color;
         color: white;
 
         &:hover {
-            background-color: darken($color: $primary-color, $amount: 10%);
+            background-color: darken($color: $secondary-color, $amount: 10%);
             box-shadow: 0 0 10px #00000033;
         }
     }
