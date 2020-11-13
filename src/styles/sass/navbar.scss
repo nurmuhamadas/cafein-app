@@ -7,6 +7,7 @@ navbar-element {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 99;
 }
 
 header {
@@ -20,7 +21,6 @@ header {
     top: 0;
     left: 0;
     box-shadow: 0 4px 10px #00000011;
-    z-index: 99;
     background-color: #fff;
 
     button.btn__wrap {
