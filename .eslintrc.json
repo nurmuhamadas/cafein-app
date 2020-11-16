@@ -17,6 +17,7 @@
         "eslint linebreak-style": [0, "error", "windows"],
         "no-underscore-dangle": "off",
         "no-plusplus": 0,
-        "class-methods-use-this": 0
+        "class-methods-use-this": 0,
+        "no-undef": 0
     }
 }
