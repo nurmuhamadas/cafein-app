@@ -2,7 +2,7 @@
 @import './variable';
 
 review-component {
-  width: 100%;
+  width: 100vw;
   height: max-content;
   padding: 0 1rem;
 
@@ -108,6 +108,7 @@ review-component {
 
 @include media-lg {
   review-component {
+    width: 100%;
     padding: 0;
   }
 }
