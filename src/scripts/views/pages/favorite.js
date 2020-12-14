@@ -4,7 +4,6 @@ import '../../../styles/sass/pages/FavoritePage.scss';
 
 const favoritePage = {
   _renderCard(restaurants) {
-    console.log(restaurants);
     const wrapper = document.querySelector('.favorite__wrap');
 
     if (restaurants.length > 0) {
