@@ -4,13 +4,21 @@ import '../../../styles/sass/pages/FavoritePage.scss';
 
 const favoritePage = {
   _renderCard(restaurants) {
+    console.log(restaurants);
     const wrapper = document.querySelector('.favorite__wrap');
-    restaurants.forEach((restaurant) => {
-      const cardElement = document.createElement('card-component');
-      cardElement.restaurant = restaurant;
-      cardElement.isSaved = true;
-      wrapper.appendChild(cardElement);
-    });
+
+    if (restaurants.length > 0) {
+      restaurants.forEach((restaurant) => {
+        const cardElement = document.createElement('card-component');
+        cardElement.restaurant = restaurant;
+        cardElement.isSaved = true;
+        wrapper.appendChild(cardElement);
+      });
+
+      return;
+    }
+
+    wrapper.innerHTML = '<p class="not__found">No data saved</p>';
   },
 
   async afterRender() {
